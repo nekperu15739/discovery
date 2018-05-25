@@ -7,9 +7,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
- * 
  * @author nekperu15739
- *
  */
 @EnableEurekaServer
 @SpringBootApplication
@@ -19,8 +17,4 @@ public class EurekaServerApplication extends SpringBootServletInitializer {
         SpringApplication.run(EurekaServerApplication.class, args);
     }
 
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(EurekaServerApplication.class);
-    }
 }
