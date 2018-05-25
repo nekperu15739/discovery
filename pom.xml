@@ -3,13 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.nekperu15739.discovery</groupId>
-	<artifactId>eureka-server</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<groupId>org.nekperu15739.microservices</groupId>
+	<artifactId>registration-and-discovery-ms</artifactId>
+	<version>0.2.0-SNAPSHOT</version>
 
-	<name>eureka-server</name>
-	<description>Demo project for Spring Boot</description>
+	<name>registration and discovery microservice</name>
+	<description>Registration and discovery microservice</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -22,6 +21,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+        <docker.image.prefix>nekperu15739</docker.image.prefix>
 	</properties>
 
 	<dependencies>
@@ -54,6 +54,17 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.2</version>
+                <configuration>
+                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
+                    <buildArgs>
+                        <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+                    </buildArgs>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 
