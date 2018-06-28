@@ -1,12 +1,12 @@
 spring:
   application:
-    name: eureka-server
+    name: eureka-service
 
 server:
   port: 8761
     
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: false #Don’t register with Eureka service.
+    fetch-registry: false #Don’t cache registry information locally.
     
