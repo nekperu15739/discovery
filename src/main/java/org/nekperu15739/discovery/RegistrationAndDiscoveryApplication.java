@@ -9,10 +9,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  */
 @EnableEurekaServer
 @SpringBootApplication
-public class RegistrationAndDiscoveryMS {
+public class RegistrationAndDiscoveryApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RegistrationAndDiscoveryMS.class, args);
+        SpringApplication.run(RegistrationAndDiscoveryApplication.class, args);
     }
 
 }

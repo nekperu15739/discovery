@@ -1,0 +1,13 @@
+language: java
+jdk:
+- oraclejdk8
+deploy:
+  provider: cloudfoundry
+  username: nekperu15739@gmail.com
+  api: https://api.run.pivotal.io
+  organization: nekperu15739
+  space: development
+  on:
+    branch: cloudfoundry
+  password:
+    secure: FQRd3ror4o1QkOzBYK2OUFe9AI2GSNGJDnPsrK/6x8p9mvtEdGW8ezKCNqEV8OyUrQGdDHqFRFhNuAoBxMeQXtsvKzR8kSdTFIa9+JCOJIiD9B4MrgpWw/VCew/n+tpZ8c91edZmQTbu4Uk2uOgolmwH/ea6e+qUWgBeW+zIBZcG6B1PPIyOUlfWts6uh3PcLzbmWayEOkGYReK1HpMZ5UbyGEj5B79CLgowTw49HO36iBgWaLJb4XxSNpRrHAZp5dWRf2KTkcN38xxf0XsU5/2bDzqpcH6bWhcSqG3mmTFunaf0INj+Al5BKk7cllhcdHPaSCKS+Rl+ZsY0cN2yYiED9gSIqtGh9k8XCDo0YRsEL3H4exK8Uw6tbfZLz5sU/kWo7qwHmPH0NOdGj8glbyzYPYZ8XeliOCNCsGsQ/mGaEMGNdTbQwNbuMzs7U6CUv3KRjMyrdL6sxg526njEuuh3DHqwik0zwcqMhSoVvYucxjmki7M5vO+dM7d24Cw0DJXu3MBX11pihnHDHik40NyKB6ahrnshhiRKKZxuXFPGPGe3TpHctvi5JIPz9UvcPRF1APfOW1cTV2hAovxGUYAbDJcFU9aOq7qQZzFXp7Di+gmyq+eXWvNUYmx1fD5OdrpC4/dUaBjp8pBcNkqw8r+4Kef6iH9v6GN6fCApGeo=
